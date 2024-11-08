@@ -1,5 +1,5 @@
 // Import named exports
-import {assets, getAssetById} from './assets.js';
+import {assets, getAssetById} from './asset.js';
 
 // Default export: Transaction class
 class Transaction {
