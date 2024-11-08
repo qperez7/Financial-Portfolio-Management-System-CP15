@@ -5,6 +5,7 @@ import Transaction from './transaction.js';
 console.log (calculatePortfolioValue());
 console.log(getPortfolioAllocation());
 
+// Adding new transactions
 const transaction1 = new Transaction (1,'buy',10);
 const transaction2 = new Transaction (2,'buy', 20);
 const transaction3 = new Transaction (3,'sell', 10);
