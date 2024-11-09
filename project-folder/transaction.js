@@ -8,7 +8,7 @@ class Transaction {
         this.type = type;
         this.quantity = quantity;
     }
-    
+     
     updateQuantity(assetId) {
     assetId = getAssetById;
     if (type === buy) {
