@@ -5,5 +5,5 @@ const assetTotal = assets.reduce((total, asset) => total + asset.price * asset.q
     return assetTotal 
 }
 export function getPortfolioAllocation() {
-    return assets.map(asset => asset/ assetTotal * 100);
+    return assetTotal / 100
 }
