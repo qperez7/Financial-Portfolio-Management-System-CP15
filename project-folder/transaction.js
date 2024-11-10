@@ -11,7 +11,7 @@ class Transaction {
         return getAssetById(assetId)
     }
     // Adds quantity & in this case adds Transaction
-    addQuantity(assetId,type,quantity) {
+    addQuantity(asset,type,quantity) {
     let asset = this.findAsset(assetId)
     if (type === 'buy') {
         return  quantity += asset.quantity 
