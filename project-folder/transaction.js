@@ -1,24 +1,26 @@
-// Import named exports
+// Import named assets and getAssetbyId
 import {assets, getAssetById} from './asset.js';
-
 // Default export: Transaction class
 class Transaction {
     constructor(assetId,type,quantity) {
         this.assetId = assetId;
         this.type = type;
         this.quantity = quantity;
+    } // Finds Assets using getAssetById
+    findAsset (assetId) {
+        return getAssetById(assetId)
     }
-     
-    updateQuantity(assetId) {
-    assetId = getAssetById;
-    if (type === buy) {
-        return  assets.quantity + this.quantity 
+    // Adds quantity & in this case adds Transaction
+    addQuantity(assetId,type,quantity) {
+    let asset = this.findAsset(assetId)
+    if (type === 'buy') {
+        return  quantity += asset.quantity 
     }
-    if (type === sell) {
-        return  assets.quantity - this.quantity
+    if (type === 'sell') {
+        return  asset.quantity -= quantity
     }
-    if (this.quantity > assets.quantity) {
-        throw new Error('Insufficient quantity for sale of [Asset Name]');
+    if (quantity > asset.quantity) {
+        throw new Error(`Insufficient quantity for sale of ${asset.name}`);
 }
 }
 }

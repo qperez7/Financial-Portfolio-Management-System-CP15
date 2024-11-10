@@ -6,12 +6,11 @@ console.log (calculatePortfolioValue());
 console.log(getPortfolioAllocation());
 
 // Adding new transactions
-const transaction1 = new Transaction (1,'buy',10);
-const transaction2 = new Transaction (2,'buy', 20);
-const transaction3 = new Transaction (3,'sell', 10);
+const newTransactions = new Transaction(assetId,type,quantity);
+newTransactions.addQuantity(1,'buy',10);
+newTransactions.addQuantity(2,'buy', 20);
+newTransactions.addQuantity(3,'sell', 10);
  
-console.log(transaction1);
-console.log(transaction2);
-console.log(transaction3);
+console.log(newTransactions);
 
 console.log(calculatePortfolioValue());
