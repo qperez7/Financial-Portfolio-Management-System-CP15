@@ -11,15 +11,17 @@ class Transaction {
         return getAssetById(assetId)
     }
     // Adds quantity & in this case adds Transaction
-    addQuantity(assetId,type,quantity) {
-    let asset = this.findAsset(assetId)
+    addQuantity(assetId,type,value) {
+    let asset = this.findAsset(assetId);
+    //asset.quantity = Number();
     if (type === 'buy') {
-        return  quantity += asset.quantity 
+        console.log(`${assetId},${asset.name},Buying: ${value},Original Quantity: ${asset.quantity},New Quantity: ${asset.quantity += value}`);
     }
     if (type === 'sell') {
-        return  asset.quantity -= quantity
+        console.log(`${assetId},${asset.name},Selling: ${value},Original Quantity: ${asset.quantity},New Quantity: ${asset.quantity -= value}`);
+    
     }
-    if (quantity > asset.quantity) {
+    else if (assets.quantity < value) {
         throw new Error(`Insufficient quantity for sale of ${asset.name}`);
 }
 }
