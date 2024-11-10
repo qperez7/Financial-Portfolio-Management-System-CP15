@@ -6,14 +6,12 @@ console.log (calculatePortfolioValue());
 console.log(getPortfolioAllocation());
 
 // Adding new transactions
-let assetId = 0
-let type = 'stock'
-let quantity = 1 
-const newTransactions = new Transaction(assetId,type,quantity); // Gave me an error so I defined it to fix this
-newTransactions.addQuantity(1,'buy',10);
-newTransactions.addQuantity(2,'buy', 20);
-newTransactions.addQuantity(3,'sell', 10);
+const newTransaction1 = new Transaction(1,'buy',10); 
+const newTransaction2 = new Transaction(2,'buy',20);
+const newTransaction3 = new Transaction(3,'sell', 10);
  
-console.log(newTransactions);
+console.log(newTransaction1);
+console.log(newTransaction2);
+console.log(newTransaction3);
 
 console.log(calculatePortfolioValue());
