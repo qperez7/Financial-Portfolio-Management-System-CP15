@@ -13,7 +13,7 @@ class Transaction {
     // Adds quantity & in this case adds Transaction
     addQuantity(assetId,type,value) {
     let asset = this.findAsset(assetId);
-    //asset.quantity = Number();
+    
     if (type === 'buy') {
         console.log(`${assetId},${asset.name},Buying: ${value},Original Quantity: ${asset.quantity},New Quantity: ${asset.quantity += value}`);
     }
@@ -21,7 +21,7 @@ class Transaction {
         console.log(`${assetId},${asset.name},Selling: ${value},Original Quantity: ${asset.quantity},New Quantity: ${asset.quantity -= value}`);
     
     }
-    else if (assets.quantity < value) {
+    else if (asset.quantity < value) {
         throw new Error(`Insufficient quantity for sale of ${asset.name}`);
 }
 }
